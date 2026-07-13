@@ -39,6 +39,14 @@ const es = {
 
   // Navbar
   language: "Idioma",
+
+  // Show more / modal
+  showMore: "Mostrar más",
+  close: "Cerrar",
+  technologies: "Tecnologías",
+  projectTypeWebsite: "Sitio Web",
+  projectTypeWebapp: "Aplicación Web",
+  playing: "Reproduciendo",
 } as const;
 
 export default es;

@@ -4,22 +4,30 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
 import { DATA } from "@/data/resume";
 import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 const BLUR_FADE_DELAY = 0.04;
+const VISIBLE_COUNT = 5;
 
 export default function CertificationsSection() {
   const { t } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
   if (DATA.certifications.length === 0) return null;
+
+  const hasMore = DATA.certifications.length > VISIBLE_COUNT;
+  const visibleCerts = expanded
+    ? DATA.certifications
+    : DATA.certifications.slice(0, VISIBLE_COUNT);
 
   return (
     <div className="flex min-h-0 flex-col gap-y-6">
       <BlurFade delay={BLUR_FADE_DELAY}>
         <h2 className="text-xl font-bold"><TextAnimate>{t("certifications")}</TextAnimate></h2>
       </BlurFade>
-      <div className="flex flex-col gap-8">
-        {DATA.certifications.map((cert, index) => {
+      <div className="relative flex flex-col gap-8">
+        {visibleCerts.map((cert, index) => {
           const inner = (
             <div className="flex items-center gap-x-3 flex-1 min-w-0">
               {cert.logoUrl ? (
@@ -74,7 +82,19 @@ export default function CertificationsSection() {
             </BlurFade>
           );
         })}
+        {hasMore && !expanded && (
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        )}
       </div>
+      {hasMore && !expanded && (
+        <button
+          type="button"
+          onClick={() => setExpanded(true)}
+          className="self-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+        >
+          {t("showMore")}
+        </button>
+      )}
     </div>
   );
 }

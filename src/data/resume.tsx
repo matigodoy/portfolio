@@ -185,31 +185,40 @@ export const DATA = {
       href: "https://chadbot.eclipta.ar/app",
       dates: "Jan 2025 - Present",
       active: true,
-      description:
-        "AI-powered messaging platform built at Eclipta. Combines intelligent automation, real-time messaging, and observability to help businesses scale their communication workflows.",
+      description: {
+        en: "AI-powered messaging platform built at Eclipta. Combines intelligent automation, real-time messaging, and observability to help businesses scale their communication workflows.",
+        es: "Plataforma de mensajería con IA construida en Eclipta. Combina automatización inteligente, mensajería en tiempo real y observabilidad para ayudar a las empresas a escalar sus flujos de comunicación.",
+      },
       technologies: [
-        "TypeScript",
-        "Node.js",
-        "AI Services",
+        "Java",
         "Docker",
+        "Postgres",
+        "TypeScript",
+        "React",
+        "OpenAI",
+        "Grok",
+        "Grafana",
+        "Google Cloud",
       ],
       links: [
         {
-          type: "Website",
+          type: "webapp",
           href: "https://chadbot.eclipta.ar/app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/chadbot_logo.jpg",
-      video: "",
+      video: "/jobs/chadbot_app.mp4",
     },
     {
       title: "Chadbot Landing",
       href: "https://chadbot.eclipta.ar/",
       dates: "Jan 2026 - Present",
       active: true,
-      description:
-        "Landing page for Chadbot, the AI-powered messaging platform by Eclipta.",
+      description: {
+        en: "Landing page for Chadbot, the AI-powered messaging platform by Eclipta.",
+        es: "Landing page de Chadbot, la plataforma de mensajería con IA de Eclipta.",
+      },
       technologies: [
         "Next.js",
         "TypeScript",
@@ -217,60 +226,67 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Website",
+          type: "website",
           href: "https://chadbot.eclipta.ar/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/chadbot-landing.png",
-      video: "",
+      video: "/jobs/chadbot_landing.mp4",
     },
     {
       title: "MD Equipamientos",
       href: "https://md-equipamientos.com/",
       dates: "2026",
       active: true,
-      description:
-        "Institutional website and product catalog for a furniture factory.",
+      description: {
+        en: "Institutional website and product catalog for a furniture factory.",
+        es: "Sitio institucional y catálogo de productos para una fábrica de muebles.",
+      },
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Website",
+          type: "website",
           href: "https://md-equipamientos.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/md-equipamientos.jpeg",
-      video: "",
+      video: "/jobs/md-equipamientos.mp4",
     },
     {
       title: "Mundosegur",
       href: "https://mundosegur.com/",
       dates: "2026",
       active: true,
-      description:
-        "Institutional website for a private security company.",
+      description: {
+        en: "Institutional website for a private security company.",
+        es: "Sitio institucional para una empresa de seguridad privada.",
+      },
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Website",
+          type: "website",
           href: "https://mundosegur.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/mundosegur.jpg",
-      video: "",
+      video: "/jobs/mundosegur.mp4",
     },
     {
       title: "Barbarie",
       href: "https://barbarie.com.ar/",
       dates: "2026",
       active: true,
-      description: "Website for a barbershop.",
+      description: {
+        en: "Website for a barbershop.",
+        es: "Sitio web para una barbería.",
+      },
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Website",
+          type: "website",
           href: "https://barbarie.com.ar/",
           icon: <Icons.globe className="size-3" />,
         },
@@ -278,12 +294,29 @@ export const DATA = {
       image: "/barbarie.jpg",
       video: "",
     },
-  ],
+  ] as {
+    title: string;
+    href: string;
+    dates: string;
+    active: boolean;
+    description: { en: string; es: string };
+    technologies: string[];
+    links: { type: string; href: string; icon: ReactNode }[];
+    image: string;
+    video: string;
+  }[],
   certifications: [
     {
-      name: "Performance in Java (Hands On)",
-      issuer: "Egg Live",
-      logoUrl: "/egglive_logo.jpeg",
+      name: "AI Fundamentals",
+      issuer: "Google",
+      logoUrl: "/google_logo.jpeg",
+      date: "Jul 2026",
+      href: "https://www.credly.com/badges/5a39f7fe-f415-4b4f-8308-fd5833bb69a0/whatsapp",
+    },
+    {
+      name: "Java High Performance",
+      issuer: "Mercado Libre",
+      logoUrl: "/mercadolibre_logo.jpeg",
       date: "Jul 2025",
       href: "",
     },

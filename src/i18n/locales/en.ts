@@ -39,6 +39,14 @@ const en = {
 
   // Navbar
   language: "Language",
+
+  // Show more / modal
+  showMore: "Show more",
+  close: "Close",
+  technologies: "Technologies",
+  projectTypeWebsite: "Website",
+  projectTypeWebapp: "Web App",
+  playing: "Playing",
 } as const;
 
 export default en;
