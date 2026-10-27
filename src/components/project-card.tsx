@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { BrowserFrame } from "@/components/browser-frame";
 import { ProjectModal } from "@/components/project-modal";
 import { Badge } from "@/components/ui/badge";
 import type { Localized, ProjectImage, ProjectLink } from "@/data/resume";
-import { displayHost, LINK_LABEL_KEYS } from "@/lib/projects";
+import { LINK_LABEL_KEYS } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useCallback, useState } from "react";
@@ -46,9 +45,8 @@ export function ProjectCard({
   const close = useCallback(() => setOpen(false), []);
   const loading = eager ? "eager" : "lazy";
   const lang = i18n.language.startsWith("es") ? "es" : "en";
-  const browserShot = images.find((image) => image.frame === "browser");
+  const desktopShot = images.find((image) => image.frame === "desktop");
   const phoneShot = images.find((image) => image.frame === "phone");
-  const frameUrl = internal ? t("projectInternal") : displayHost(href);
 
   return (
     <>
@@ -59,16 +57,16 @@ export function ProjectCard({
         )}
       >
         <div className="relative aspect-[16/10] w-full">
-          {browserShot ? (
-            <BrowserFrame url={frameUrl} className="h-full">
+          {desktopShot ? (
+            <div className="h-full overflow-hidden rounded-lg border border-border bg-muted">
               <img
-                src={browserShot.src}
-                alt={browserShot.alt[lang]}
+                src={desktopShot.src}
+                alt={desktopShot.alt[lang]}
                 loading={loading}
                 draggable={false}
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
               />
-            </BrowserFrame>
+            </div>
           ) : (
             <div className="h-full rounded-lg bg-muted" />
           )}

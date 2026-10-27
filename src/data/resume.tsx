@@ -14,7 +14,7 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { SQL } from "@/components/ui/svgs/sql";
 
 export type Localized = { en: string; es: string };
-export type ProjectImage = { src: string; alt: Localized; frame: "browser" | "phone" };
+export type ProjectImage = { src: string; alt: Localized; frame: "desktop" | "phone" };
 export type ProjectLink = { type: string; href: string; icon: ReactNode };
 
 export const DATA = {
@@ -336,7 +336,7 @@ export const DATA = {
         },
       ],
       images: [
-        { src: "/projects/jugador-panel.webp", alt: { en: "Jugador venue dashboard", es: "Panel del predio en Jugador" }, frame: "browser" },
+        { src: "/projects/jugador-panel.webp", alt: { en: "Jugador venue dashboard", es: "Panel del predio en Jugador" }, frame: "desktop" },
         { src: "/projects/jugador-reserva.webp", alt: { en: "Jugador court booking on mobile", es: "Reserva de cancha en la app de Jugador" }, frame: "phone" },
         { src: "/projects/jugador-confirmada.webp", alt: { en: "Jugador booking confirmation on mobile", es: "Confirmación de reserva en la app de Jugador" }, frame: "phone" },
       ],
@@ -390,8 +390,8 @@ export const DATA = {
         },
       ],
       images: [
-        { src: "/projects/chadbot-inbox.webp", alt: { en: "Chadbot unified inbox", es: "Bandeja unificada de Chadbot" }, frame: "browser" },
-        { src: "/projects/chadbot-landing.png", alt: { en: "Chadbot landing page", es: "Landing page de Chadbot" }, frame: "browser" },
+        { src: "/projects/chadbot-inbox.webp", alt: { en: "Chadbot unified inbox", es: "Bandeja unificada de Chadbot" }, frame: "desktop" },
+        { src: "/projects/chadbot-landing.png", alt: { en: "Chadbot landing page", es: "Landing page de Chadbot" }, frame: "desktop" },
       ],
     },
     {
@@ -433,8 +433,8 @@ export const DATA = {
       ],
       links: [],
       images: [
-        { src: "/projects/marinic-ventas.webp", alt: { en: "Marinic point of sale", es: "Punto de venta de Marinic" }, frame: "browser" },
-        { src: "/projects/marinic-inventario.webp", alt: { en: "Marinic inventory", es: "Inventario de Marinic" }, frame: "browser" },
+        { src: "/projects/marinic-ventas.webp", alt: { en: "Marinic point of sale", es: "Punto de venta de Marinic" }, frame: "desktop" },
+        { src: "/projects/marinic-inventario.webp", alt: { en: "Marinic inventory", es: "Inventario de Marinic" }, frame: "desktop" },
       ],
     },
     {
@@ -469,7 +469,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      images: [{ src: "/projects/md.webp", alt: { en: "MD Equipamientos website", es: "Sitio web de MD Equipamientos" }, frame: "browser" }],
+      images: [{ src: "/projects/md.webp", alt: { en: "MD Equipamientos website", es: "Sitio web de MD Equipamientos" }, frame: "desktop" }],
     },
     {
       title: "Warrior",
@@ -510,7 +510,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      images: [{ src: "/projects/warrior.webp", alt: { en: "Warrior website", es: "Sitio web de Warrior" }, frame: "browser" }],
+      images: [{ src: "/projects/warrior.webp", alt: { en: "Warrior website", es: "Sitio web de Warrior" }, frame: "desktop" }],
     },
     {
       title: "Docta Steel",
@@ -552,7 +552,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      images: [{ src: "/projects/docta.webp", alt: { en: "Docta Steel website", es: "Sitio web de Docta Steel" }, frame: "browser" }],
+      images: [{ src: "/projects/docta.webp", alt: { en: "Docta Steel website", es: "Sitio web de Docta Steel" }, frame: "desktop" }],
     },
     {
       title: "Mundosegur",
@@ -586,7 +586,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      images: [{ src: "/projects/mundosegur.webp", alt: { en: "Mundosegur website", es: "Sitio web de Mundosegur" }, frame: "browser" }],
+      images: [{ src: "/projects/mundosegur.webp", alt: { en: "Mundosegur website", es: "Sitio web de Mundosegur" }, frame: "desktop" }],
     },
     {
       title: "Barbarie",
@@ -618,7 +618,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      images: [{ src: "/projects/barbarie.webp", alt: { en: "Barbarie website", es: "Sitio web de Barbarie" }, frame: "browser" }],
+      images: [{ src: "/projects/barbarie.webp", alt: { en: "Barbarie website", es: "Sitio web de Barbarie" }, frame: "desktop" }],
     },
   ] as {
     title: string;

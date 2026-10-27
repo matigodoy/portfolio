@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { BrowserFrame } from "@/components/browser-frame";
 import { Badge } from "@/components/ui/badge";
 import type { Localized, ProjectImage, ProjectLink } from "@/data/resume";
-import { displayHost, LINK_LABEL_KEYS } from "@/lib/projects";
+import { LINK_LABEL_KEYS } from "@/lib/projects";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, ChevronLeft, ChevronRight, X } from "lucide-react";
 import Link from "next/link";
@@ -46,7 +45,6 @@ export function ProjectModal({
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const current = images[index];
-  const frameUrl = internal ? t("projectInternal") : displayHost(href);
 
   const step = useCallback(
     (delta: number) => {
@@ -128,17 +126,15 @@ export function ProjectModal({
           <div
             className={cn(
               "relative flex h-64 items-center justify-center overflow-hidden rounded-lg bg-muted sm:h-[440px]",
-              current?.frame === "phone" && "py-4"
+              current?.frame === "phone" ? "py-4" : "border border-border"
             )}
           >
-            {current?.frame === "browser" ? (
-              <BrowserFrame url={frameUrl} className="h-full w-full">
-                <img
-                  src={current.src}
-                  alt={current.alt[lang]}
-                  className="h-full w-full object-cover object-top"
-                />
-              </BrowserFrame>
+            {current?.frame === "desktop" ? (
+              <img
+                src={current.src}
+                alt={current.alt[lang]}
+                className="h-full w-full object-cover object-top"
+              />
             ) : current ? (
               <img
                 src={current.src}
