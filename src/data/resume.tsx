@@ -13,16 +13,26 @@ import { MongoDB } from "@/components/ui/svgs/mongodb";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { SQL } from "@/components/ui/svgs/sql";
 
+export type Localized = { en: string; es: string };
+export type ProjectImage = { src: string; alt: Localized; frame: "browser" | "phone" };
+export type ProjectLink = { type: string; href: string; icon: ReactNode };
+
 export const DATA = {
   name: "Matias Godoy",
   initials: "MG",
-  url: "https://matiasgodoy.dev",
+  url: "https://www.matigodoy.com.ar",
   location: "Córdoba, Argentina",
   locationLink: "https://www.google.com/maps/place/Cordoba,+Argentina/",
   description: "Come in and get to know me a little.",
+  headline:
+    "Software Engineer and co-founder of Eclipta in Córdoba, Argentina. Builds SaaS products, ERPs and AI-powered systems with Java/Spring Boot, TypeScript/React, React Native and .NET. Ex-Mercado Libre checkout team.",
   summary:
-    "Software engineer focused on building scalable systems and AI-powered products. Co-founded [Eclipta](https://www.linkedin.com/company/eclipta-argentina) to build intelligent messaging and automation solutions. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) developing Angular/.NET systems for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
+    "Software engineer focused on building scalable systems and AI-powered products. Co-founded [Eclipta](https://eclipta.com.ar) to build SaaS products, management systems and AI automation for businesses. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) developing Angular/.NET systems for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
   avatarUrl: "/me.png",
+  languages: [
+    { name: "Spanish", level: "Native" },
+    { name: "English", level: "C1 Advanced (EF SET 62/100)" },
+  ] as { name: string; level: string }[],
   skills: [
     { name: "Java", icon: Java },
     { name: "TypeScript", icon: Typescript },
@@ -37,6 +47,108 @@ export const DATA = {
     { name: "PostgreSQL", icon: Postgresql },
     { name: "SQL", icon: SQL },
   ],
+  capabilities: [
+    {
+      area: "Backend & architecture",
+      items: [
+        "Java 21",
+        "Spring Boot (WebFlux, Security, R2DBC)",
+        "Reactive programming with Project Reactor",
+        "Hexagonal architecture",
+        "REST APIs and webhooks",
+        "C# / .NET Framework, ASP.NET, VB.NET",
+        "SOAP web services",
+        "Node.js",
+      ],
+    },
+    {
+      area: "Frontend",
+      items: [
+        "TypeScript",
+        "React 19",
+        "Next.js",
+        "Vite",
+        "Tailwind CSS",
+        "HeroUI",
+        "TanStack Query and Zustand",
+        "Angular 15–18 and AngularJS",
+        "Atomic Design",
+        "Progressive Web Apps",
+      ],
+    },
+    {
+      area: "Mobile",
+      items: [
+        "React Native with Expo (Expo Router, EAS, push notifications)",
+        "FlutterFlow (iOS and Android wallet app)",
+      ],
+    },
+    {
+      area: "Data",
+      items: [
+        "PostgreSQL (R2DBC, Cloud SQL)",
+        "MongoDB",
+        "Microsoft SQL Server (stored procedures)",
+        "Oracle SQL",
+      ],
+    },
+    {
+      area: "AI",
+      items: [
+        "OpenAI (Responses API, structured outputs, tool calling, audio transcription)",
+        "Google Gemini",
+        "LLM agents with human handoff",
+        "AI-assisted development (Claude, Cursor, Windsurf, GitHub Copilot, OpenCode, z.AI)",
+      ],
+    },
+    {
+      area: "Payments & integrations",
+      items: [
+        "Mercado Pago (Checkout Pro, in-store QR, subscriptions, split payments, marketplace OAuth)",
+        "WhatsApp, Instagram and Telegram messaging APIs",
+        "Google Calendar API",
+        "Firebase Authentication",
+        "Web push notifications",
+      ],
+    },
+    {
+      area: "Cloud & DevOps",
+      items: [
+        "Google Cloud (Cloud Run, Cloud SQL, Cloud Storage, Artifact Registry, Workload Identity Federation)",
+        "Firebase Hosting",
+        "Docker and Cloud Native Buildpacks",
+        "GitHub Actions CI/CD",
+        "Jenkins, Azure DevOps and GitLab",
+        "Microsoft Azure",
+      ],
+    },
+    {
+      area: "Observability",
+      items: ["OpenTelemetry", "Datadog", "Grafana", "Kibana", "New Relic"],
+    },
+    {
+      area: "Microsoft business apps",
+      items: ["Dynamics 365", "Power BI", "Power Automate", "Power Apps"],
+    },
+    {
+      area: "Infrastructure & networking",
+      items: [
+        "VMware ESXi and vSphere",
+        "Linux, FreeBSD and Windows",
+        "UniFi, MikroTik and Cisco networking",
+        "Hardware repair (HP-authorized service center)",
+      ],
+    },
+    {
+      area: "Practices",
+      items: [
+        "Agile / Scrum",
+        "Clean code and code review",
+        "Technical SEO (JSON-LD, Open Graph, sitemaps)",
+        "Teaching and mentoring",
+      ],
+    },
+  ] as { area: string; items: string[] }[],
   navbar: [] as { href: string; icon: ComponentType; label: string }[],
   contact: {
     email: "mati_godoy@outlook.com",
@@ -90,7 +202,7 @@ export const DATA = {
     },
     {
       company: "Eclipta",
-      href: "https://www.linkedin.com/company/eclipta-argentina",
+      href: "https://eclipta.com.ar",
       badges: ["Founder"],
       location: "Córdoba, Argentina · Remote",
       title: "Co-founder & Software Engineer",
@@ -98,7 +210,7 @@ export const DATA = {
       start: "Jan 2025",
       end: "Present",
       description:
-        "Co-founded **Eclipta** and lead development of **Chadbot**, an **AI-powered** messaging platform. Design, develop and ship software with a modern tech stack including **AI services**, **observability** tooling, **automated deployments**, and **workflow automation** to help businesses scale their operations.",
+        "Co-founded **Eclipta**, a software lab that builds its own SaaS products and custom systems for businesses. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
     },
     {
       company: "Universidad Blas Pascal",
@@ -114,7 +226,7 @@ export const DATA = {
     },
     {
       company: "Bitsion",
-      href: "https://bitsion.com",
+      href: "https://www.bitsion.com/",
       badges: [],
       location: "Argentina · Hybrid",
       title: "Full Stack Developer",
@@ -181,69 +293,175 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chadbot",
-      href: "https://chadbot.eclipta.ar/app",
-      dates: "Jan 2025 - Present",
+      title: "Jugador",
+      href: "https://jugador.com.ar/",
+      dates: "Jul 2026 - Present",
       active: true,
+      category: { en: "Own product · SaaS", es: "Producto propio · SaaS" },
       description: {
-        en: "AI-powered messaging platform built at Eclipta. Combines intelligent automation, real-time messaging, and observability to help businesses scale their communication workflows.",
-        es: "Plataforma de mensajería con IA construida en Eclipta. Combina automatización inteligente, mensajería en tiempo real y observabilidad para ayudar a las empresas a escalar sus flujos de comunicación.",
+        en: "Booking and management platform for sports venues: players book and split the payment without an account, while venues run their schedule, Mercado Pago payments and stats.",
+        es: "Plataforma de reservas y gestión para predios deportivos: los jugadores reservan y dividen el pago sin crear cuenta, y el predio maneja agenda, cobros con Mercado Pago y estadísticas.",
+      },
+      highlights: {
+        en: [
+          "Guest booking with split payment via Mercado Pago",
+          "Owner panel: schedule, cash registers and stats",
+          "Companion iOS/Android app with push notifications",
+          "AI assistant for venue staff, built on OpenAI",
+        ],
+        es: [
+          "Reserva sin cuenta y pago dividido con Mercado Pago",
+          "Panel del predio: agenda, cajas y estadísticas",
+          "App iOS/Android complementaria con avisos push",
+          "Asistente de IA para el equipo del predio, con OpenAI",
+        ],
       },
       technologies: [
         "Java",
-        "Docker",
-        "Postgres",
-        "TypeScript",
+        "Spring Boot",
+        "PostgreSQL",
         "React",
+        "React Native",
+        "TypeScript",
+        "Mercado Pago",
         "OpenAI",
-        "Grok",
-        "Grafana",
+        "Firebase",
         "Google Cloud",
       ],
       links: [
         {
           type: "webapp",
-          href: "https://chadbot.eclipta.ar/app",
+          href: "https://jugador.com.ar/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/chadbot_logo.jpg",
-      video: "/jobs/chadbot_app.mp4",
+      images: [
+        { src: "/projects/jugador-panel.webp", alt: { en: "Jugador venue dashboard", es: "Panel del predio en Jugador" }, frame: "browser" },
+        { src: "/projects/jugador-reserva.webp", alt: { en: "Jugador court booking on mobile", es: "Reserva de cancha en la app de Jugador" }, frame: "phone" },
+        { src: "/projects/jugador-confirmada.webp", alt: { en: "Jugador booking confirmation on mobile", es: "Confirmación de reserva en la app de Jugador" }, frame: "phone" },
+      ],
     },
     {
-      title: "Chadbot Landing",
-      href: "https://chadbot.eclipta.ar/",
-      dates: "Jan 2026 - Present",
+      title: "Chadbot",
+      href: "https://chadbot.eclipta.com.ar/",
+      dates: "Jan 2025 - Present",
       active: true,
+      category: { en: "Own product · AI SaaS", es: "Producto propio · SaaS con IA" },
       description: {
-        en: "Landing page for Chadbot, the AI-powered messaging platform by Eclipta.",
-        es: "Landing page de Chadbot, la plataforma de mensajería con IA de Eclipta.",
+        en: "AI messaging platform for small businesses and sales teams: it answers leads on WhatsApp, Instagram and Telegram and hands the conversation off to the right person.",
+        es: "Plataforma de mensajería con IA para emprendedores y equipos comerciales: responde leads en WhatsApp, Instagram y Telegram y deriva la conversación a la persona indicada.",
+      },
+      highlights: {
+        en: [
+          "Unified inbox for WhatsApp, Instagram and Telegram",
+          "AI replies with handoff to human agents",
+          "AI appointment booking synced to Google Calendar",
+          "Subscription billing with Mercado Pago",
+        ],
+        es: [
+          "Bandeja unificada de WhatsApp, Instagram y Telegram",
+          "Respuestas con IA y derivación a agentes humanos",
+          "Turnos agendados por IA en Google Calendar",
+          "Suscripciones y cobros con Mercado Pago",
+        ],
       },
       technologies: [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
         "Next.js",
         "TypeScript",
-        "Tailwind CSS",
+        "OpenAI",
+        "Mercado Pago",
+        "Firebase",
+        "Docker",
+        "Google Cloud",
       ],
       links: [
         {
-          type: "website",
-          href: "https://chadbot.eclipta.ar/",
+          type: "webapp",
+          href: "https://chadbot.eclipta.com.ar/app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "landing",
+          href: "https://chadbot.eclipta.com.ar/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/chadbot-landing.png",
-      video: "/jobs/chadbot_landing.mp4",
+      images: [
+        { src: "/projects/chadbot-inbox.webp", alt: { en: "Chadbot unified inbox", es: "Bandeja unificada de Chadbot" }, frame: "browser" },
+        { src: "/projects/chadbot-landing.png", alt: { en: "Chadbot landing page", es: "Landing page de Chadbot" }, frame: "browser" },
+      ],
+    },
+    {
+      title: "Marinic",
+      href: "",
+      dates: "Oct 2026 - Present",
+      active: true,
+      internal: true,
+      category: { en: "ERP + point of sale", es: "ERP + punto de venta" },
+      description: {
+        en: "ERP and point-of-sale system for a clothing brand: checkout with Mercado Pago QR, inventory, exchanges and customers. Currently in development.",
+        es: "ERP y punto de venta para una marca de ropa: caja con QR de Mercado Pago, inventario, cambios y clientes. Actualmente en desarrollo.",
+      },
+      highlights: {
+        en: [
+          "Mercado Pago checkout with in-store QR and payment link",
+          "Inventory with stock counts, transfers and barcode labels",
+          "Cash register with blind count and PIN approvals",
+          "Exchanges, returns and PDF receipts with QR",
+        ],
+        es: [
+          "Cobro con QR en caja y link de pago de Mercado Pago",
+          "Inventario con conteos, traslados y códigos de barras",
+          "Caja con arqueo ciego y autorizaciones con PIN",
+          "Cambios, devoluciones y comprobantes PDF con QR",
+        ],
+      },
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Mercado Pago",
+        "Firebase",
+        "Google Cloud",
+      ],
+      links: [],
+      images: [
+        { src: "/projects/marinic-ventas.webp", alt: { en: "Marinic point of sale", es: "Punto de venta de Marinic" }, frame: "browser" },
+        { src: "/projects/marinic-inventario.webp", alt: { en: "Marinic inventory", es: "Inventario de Marinic" }, frame: "browser" },
+      ],
     },
     {
       title: "MD Equipamientos",
       href: "https://md-equipamientos.com/",
       dates: "2026",
       active: true,
+      category: { en: "Website + catalog", es: "Sitio + catálogo" },
       description: {
-        en: "Institutional website and product catalog for a furniture factory.",
-        es: "Sitio institucional y catálogo de productos para una fábrica de muebles.",
+        en: "Website and online catalog of custom furniture for a furniture factory, showing products by category and completed home and commercial projects.",
+        es: "Sitio web y catálogo online de muebles a medida para una fábrica de muebles, con productos por categoría y trabajos realizados para hogares y comercios.",
       },
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      highlights: {
+        en: [
+          "Product catalog by category with full-screen photo viewer",
+          "Project gallery split by home and commercial work",
+          "Per-route SEO with Open Graph and JSON-LD",
+          "Image pipeline with AVIF/WebP variants and WhatsApp CTA",
+        ],
+        es: [
+          "Catálogo por categoría con fotos ampliables",
+          "Galería de trabajos separada en hogar y comercio",
+          "SEO por ruta con Open Graph y JSON-LD",
+          "Imágenes optimizadas en AVIF/WebP y botón de WhatsApp",
+        ],
+      },
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router"],
       links: [
         {
           type: "website",
@@ -251,19 +469,116 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/md-equipamientos.jpeg",
-      video: "/jobs/md-equipamientos.mp4",
+      images: [{ src: "/projects/md.webp", alt: { en: "MD Equipamientos website", es: "Sitio web de MD Equipamientos" }, frame: "browser" }],
+    },
+    {
+      title: "Warrior",
+      href: "https://www.warriorargentina.com/",
+      dates: "2026",
+      active: true,
+      category: { en: "Website redesign", es: "Rediseño web" },
+      description: {
+        en: "Redesigned marketing website for a fleet satellite-tracking company in Córdoba, Argentina, presenting its services, plans and client login.",
+        es: "Rediseño del sitio institucional de una empresa de seguimiento satelital de flotas de Córdoba, con sus servicios, planes y acceso para clientes.",
+      },
+      highlights: {
+        en: [
+          "Animated fleet map hero with vehicle cards",
+          "Plan comparison: Standard, Pro and Total",
+          "Animated stat counters and client logo carousel",
+          "Light/dark theme with persisted preference",
+        ],
+        es: [
+          "Hero con mapa de flota animado y fichas de vehículos",
+          "Comparativa de planes Standard, Pro y Total",
+          "Contadores animados y carrusel de logos de clientes",
+          "Tema claro/oscuro con preferencia guardada",
+        ],
+      },
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Router",
+      ],
+      links: [
+        {
+          type: "website",
+          href: "https://www.warriorargentina.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      images: [{ src: "/projects/warrior.webp", alt: { en: "Warrior website", es: "Sitio web de Warrior" }, frame: "browser" }],
+    },
+    {
+      title: "Docta Steel",
+      href: "https://doctasteel.com/",
+      dates: "2026",
+      active: true,
+      category: { en: "Website redesign", es: "Rediseño web" },
+      description: {
+        en: "Website redesign for a steel framing construction company in Córdoba, with services, a coverage map, a project gallery and a technical service page.",
+        es: "Rediseño del sitio web de una constructora de steel framing en Córdoba, con servicios, mapa de zonas de cobertura, galería de obras y página de servicio técnico.",
+      },
+      highlights: {
+        en: [
+          "Animated before/after image slider in the hero",
+          "Interactive coverage map with GeoJSON zones",
+          "Filterable gallery of photos, YouTube and Instagram",
+          "Quote form that opens a prefilled WhatsApp message",
+        ],
+        es: [
+          "Slider antes/después animado en el hero",
+          "Mapa interactivo de zonas de cobertura con GeoJSON",
+          "Galería filtrable de fotos, YouTube e Instagram",
+          "Formulario de presupuesto que abre WhatsApp precargado",
+        ],
+      },
+      technologies: [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Router",
+        "Leaflet",
+      ],
+      links: [
+        {
+          type: "website",
+          href: "https://doctasteel.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      images: [{ src: "/projects/docta.webp", alt: { en: "Docta Steel website", es: "Sitio web de Docta Steel" }, frame: "browser" }],
     },
     {
       title: "Mundosegur",
       href: "https://mundosegur.com/",
       dates: "2026",
       active: true,
+      category: { en: "Institutional website", es: "Sitio institucional" },
       description: {
-        en: "Institutional website for a private security company.",
-        es: "Sitio institucional para una empresa de seguridad privada.",
+        en: "Institutional website for a private security company in Córdoba, with a printable service brochure and WhatsApp contact.",
+        es: "Sitio institucional para una empresa de seguridad privada de Córdoba, con cartilla de servicios imprimible y contacto por WhatsApp.",
       },
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      highlights: {
+        en: [
+          "Printable service brochure",
+          "WhatsApp quote CTA and embedded map",
+          "Auto-advancing hero slider",
+          "AVIF/WebP images with picture fallbacks",
+        ],
+        es: [
+          "Cartilla de servicios imprimible",
+          "CTA de presupuesto por WhatsApp y mapa embebido",
+          "Slider de portada con avance automático",
+          "Imágenes AVIF/WebP con fallback",
+        ],
+      },
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "Apache"],
       links: [
         {
           type: "website",
@@ -271,19 +586,31 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/mundosegur.jpg",
-      video: "/jobs/mundosegur.mp4",
+      images: [{ src: "/projects/mundosegur.webp", alt: { en: "Mundosegur website", es: "Sitio web de Mundosegur" }, frame: "browser" }],
     },
     {
       title: "Barbarie",
       href: "https://barbarie.com.ar/",
       dates: "2026",
       active: true,
+      category: { en: "Institutional website", es: "Sitio institucional" },
       description: {
-        en: "Website for a barbershop.",
-        es: "Sitio web para una barbería.",
+        en: "Website for a premium barbershop in Córdoba, presenting its story, photo gallery, team, client reviews and opening hours.",
+        es: "Sitio para una barbería premium en Córdoba, con su historia, galería de fotos, equipo, opiniones de clientes y horarios de atención.",
       },
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      highlights: {
+        en: [
+          "Story, gallery, team and reviews sections",
+          "Masonry photo gallery with hover effects",
+          "Floating WhatsApp button for booking inquiries",
+        ],
+        es: [
+          "Secciones de historia, galería, equipo y opiniones",
+          "Galería de fotos tipo masonry con efectos hover",
+          "Botón flotante de WhatsApp para consultas de turnos",
+        ],
+      },
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS"],
       links: [
         {
           type: "website",
@@ -291,19 +618,20 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/barbarie.jpg",
-      video: "",
+      images: [{ src: "/projects/barbarie.webp", alt: { en: "Barbarie website", es: "Sitio web de Barbarie" }, frame: "browser" }],
     },
   ] as {
     title: string;
     href: string;
     dates: string;
     active: boolean;
-    description: { en: string; es: string };
+    internal?: boolean;
+    category: Localized;
+    description: Localized;
+    highlights?: { en: string[]; es: string[] };
     technologies: string[];
-    links: { type: string; href: string; icon: ReactNode }[];
-    image: string;
-    video: string;
+    links: ProjectLink[];
+    images: ProjectImage[];
   }[],
   certifications: [
     {

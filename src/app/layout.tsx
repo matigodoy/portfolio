@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/components/i18n-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
+import { buildPersonJsonLd } from "@/lib/ai-profile";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -27,10 +28,28 @@ export const metadata: Metadata = {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
   },
-  description: DATA.description,
+  description: DATA.headline,
+  authors: [{ name: DATA.name, url: DATA.url }],
+  creator: DATA.name,
+  keywords: [
+    DATA.name,
+    "Software Engineer",
+    "Eclipta",
+    "Córdoba, Argentina",
+    ...DATA.projects.map((project) => project.title),
+    ...DATA.skills.map((skill) => skill.name),
+  ],
+  alternates: {
+    types: {
+      "text/plain": [
+        { url: "/llms.txt", title: "LLM-readable profile" },
+        { url: "/llms-full.txt", title: "Full LLM-readable profile" },
+      ],
+    },
+  },
   openGraph: {
     title: `${DATA.name}`,
-    description: DATA.description,
+    description: DATA.headline,
     url: DATA.url,
     siteName: `${DATA.name}`,
     locale: "en_US",
@@ -68,11 +87,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased relative",
+          "min-h-screen bg-background font-sans antialiased relative overflow-x-clip",
           geist.variable,
           geistMono.variable
         )}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: buildPersonJsonLd() }}
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <I18nProvider>
           <TooltipProvider delayDuration={0}>

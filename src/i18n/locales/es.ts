@@ -3,7 +3,7 @@ const es = {
   description:
     "Co-fundador e Ingeniero de Software en Eclipta. Construyendo productos impulsados por IA y soluciones de automatización.",
   summary:
-    "Soy un apasionado por la tecnología, llevo más de 10 años en el rubro rompiendo y arreglando cosas. Esto me llevó a ser Software Engineer en [Mercado Libre](/#work) en el equipo de checkout y hoy me encuentro emprendiendo en [Eclipta](https://www.linkedin.com/company/eclipta-argentina) con mi propio SaaS basado en IA. Abierto a seguir abriendo caminos e innovar.",
+    "Soy un apasionado por la tecnología, llevo más de 10 años en el rubro rompiendo y arreglando cosas. Esto me llevó a ser Software Engineer en [Mercado Libre](/#work) en el equipo de checkout y hoy me encuentro emprendiendo en [Eclipta](https://eclipta.com.ar) con mi propio SaaS basado en IA. Abierto a seguir abriendo caminos e innovar.",
 
   // Section headings
   about: "Sobre mí",
@@ -26,7 +26,7 @@ const es = {
   projectsLabel: "Mis Proyectos",
   projectsTitle: "Mirá mis últimos trabajos",
   projectsDescription:
-    "Trabajé en una variedad de proyectos, desde sitios web simples hasta aplicaciones web complejas. Aquí están algunos de mis favoritos.",
+    "Desde productos SaaS propios hasta ERPs y sitios para clientes, construidos en Eclipta.",
 
   // Hackathons
   hackathonsLabel: "Hackathons",
@@ -46,7 +46,14 @@ const es = {
   technologies: "Tecnologías",
   projectTypeWebsite: "Sitio Web",
   projectTypeWebapp: "Aplicación Web",
-  playing: "Reproduciendo",
+  projectTypeLanding: "Landing",
+  projectTypeAppStore: "App Store",
+  projectTypePlayStore: "Google Play",
+  projectInternal: "Sistema interno",
+  highlights: "Destacados",
+  screenshot: "Captura",
+  previous: "Anterior",
+  next: "Siguiente",
 } as const;
 
 export default es;

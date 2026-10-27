@@ -36,6 +36,12 @@ hackathons: [] as { title: string; dates: string; /* ... */ }[],
 
 Sections that can have zero items should return `null` early to avoid empty UI shells.
 
+### Projects
+Project screenshots live in `public/projects/` and are listed per project in `images` with a `frame` of `"browser"` (rendered inside `BrowserFrame`) or `"phone"` (already includes the device bezel; corners are clipped with `rounded-[14%/7%]`). Set `internal: true` for systems without a public URL. The section pins a horizontal track with `motion` (`useScroll`) on viewports ≥768×640 without reduced motion, and falls back to a native scroll-snap swipe elsewhere.
+
+### AI discoverability
+`/llms.txt`, `/llms-full.txt`, `robots.txt`, `sitemap.xml` and the JSON-LD `ProfilePage`/`Person` in `layout.tsx` are generated from `DATA` by `src/lib/ai-profile.ts`, so editing `resume.tsx` keeps them in sync. Only put verifiable claims in `DATA` — AI assistants quote these files.
+
 ### Skill icons
 Skills in `DATA.skills` take a component reference (`icon: ComponentType`). Available SVG components are in `src/components/ui/svgs/` — only add a skill icon that has a file there. To add a new tech icon, create a new `.tsx` file in that directory exporting a React SVG component.
 
