@@ -25,9 +25,9 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/Cordoba,+Argentina/",
   description: "Come in and get to know me a little.",
   headline:
-    "Software Engineer and co-founder of Eclipta in Córdoba, Argentina. Builds SaaS products, ERPs and AI-powered systems with Java/Spring Boot, TypeScript/React, React Native and .NET. Ex-Mercado Libre checkout team.",
+    "Software Engineer and Product Owner at Eclipta in Córdoba, Argentina. Builds SaaS products, ERPs and AI-powered systems with Java/Spring Boot, TypeScript/React, React Native and .NET. Ex-Mercado Libre checkout team.",
   summary:
-    "Software engineer focused on building scalable systems and AI-powered products. Co-founded [Eclipta](https://eclipta.com.ar) to build SaaS products, management systems and AI automation for businesses. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) developing Angular/.NET systems for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
+    "Software engineer focused on building scalable systems and AI-powered products. Software Engineer and Product Owner at [Eclipta](https://eclipta.com.ar), building SaaS products, management systems and AI automation for businesses. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) developing Angular/.NET systems for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
   avatarUrl: "/me.png",
   languages: [
     { name: "Spanish", level: "Native" },
@@ -203,14 +203,14 @@ export const DATA = {
     {
       company: "Eclipta",
       href: "https://eclipta.com.ar",
-      badges: ["Founder"],
+      badges: [],
       location: "Córdoba, Argentina · Remote",
-      title: "Co-founder & Software Engineer",
+      title: "Software Engineer & Product Owner",
       logoUrl: "/eclipta_argentina_logo.jpeg",
       start: "Jan 2025",
       end: "Present",
       description:
-        "Co-founded **Eclipta**, a software lab that builds its own SaaS products and custom systems for businesses. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
+        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
     },
     {
       company: "Universidad Blas Pascal",

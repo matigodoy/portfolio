@@ -1,9 +1,9 @@
 const es = {
   // Hero
   description:
-    "Co-fundador e Ingeniero de Software en Eclipta. Construyendo productos impulsados por IA y soluciones de automatización.",
+    "Software Engineer y Product Owner en Eclipta. Construyendo productos impulsados por IA y soluciones de automatización.",
   summary:
-    "Soy un apasionado por la tecnología, llevo más de 10 años en el rubro rompiendo y arreglando cosas. Esto me llevó a ser Software Engineer en [Mercado Libre](/#work) en el equipo de checkout y hoy me encuentro emprendiendo en [Eclipta](https://eclipta.com.ar) con mi propio SaaS basado en IA. Abierto a seguir abriendo caminos e innovar.",
+    "Soy un apasionado por la tecnología, llevo más de 10 años en el rubro rompiendo y arreglando cosas. Esto me llevó a ser Software Engineer en [Mercado Libre](/#work) en el equipo de checkout y hoy construyo productos SaaS basados en IA en [Eclipta](https://eclipta.com.ar). Abierto a seguir abriendo caminos e innovar.",
 
   // Section headings
   about: "Sobre mí",
