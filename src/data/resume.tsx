@@ -74,6 +74,7 @@ export const DATA = {
         "Angular 15–18 and AngularJS",
         "Atomic Design",
         "Progressive Web Apps",
+        "Web performance optimization (Lighthouse, lazy loading, image and bundle size optimization)",
       ],
     },
     {
@@ -212,7 +213,7 @@ export const DATA = {
       start: "Jan 2025",
       end: "Present",
       description:
-        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites with technical **SEO** for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
+        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites with technical **SEO** for clients, and optimize **web performance** across Chadbot, Jugador and client sites such as Docta Steel and MD Equipamientos. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
     },
     {
       company: "Universidad Blas Pascal",
@@ -236,7 +237,7 @@ export const DATA = {
       start: "Aug 2022",
       end: "Mar 2025",
       description:
-        "Full stack development across multiple roles and projects, with **Angular** and **React** on the frontend. Built **tucarpeta+®** using **Atomic Design** for Universidad Siglo 21, Universidad Kennedy, and other clients using **Angular 15–18**, **.NET Framework**, **MongoDB**, and **Jenkins**/**Azure DevOps**. Developed **Paycloud**, a mobile wallet app published on **iOS** and **Android** using **FlutterFlow**, and **AVA**, a mobile app for **Claro Argentina** built with **Ionic**. Also worked on **SEO** for web projects. Earlier project: **tucarpeta©** for **Claro Argentina** with **AngularJS**, **.NET**, **Razor**, and **MongoDB**.",
+        "Full stack development across multiple roles and projects, with **Angular** and **React** on the frontend. Built **tucarpeta+®** using **Atomic Design** for Universidad Siglo 21, Universidad Kennedy, and other clients using **Angular 15–18**, **.NET Framework**, **MongoDB**, and **Jenkins**/**Azure DevOps**. Developed **Paycloud**, a mobile wallet app published on **iOS** and **Android** using **FlutterFlow**, and **AVA**, a mobile app for **Claro Argentina** built with **Ionic**. Optimized **tucarpeta** web performance with lazy-loaded Angular modules, **Lighthouse** improvements, image optimization and a smaller bundle. Also worked on **SEO** for web projects. Earlier project: **tucarpeta©** for **Claro Argentina** with **AngularJS**, **.NET**, **Razor**, and **MongoDB**.",
     },
     {
       company: "CEDI Tech Consulting",
