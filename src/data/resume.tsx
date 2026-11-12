@@ -27,7 +27,7 @@ export const DATA = {
   headline:
     "Software Engineer and Product Owner at Eclipta in Córdoba, Argentina. Builds SaaS products, ERPs and AI-powered systems with Java/Spring Boot, TypeScript/React, React Native and .NET. Ex-Mercado Libre checkout team.",
   summary:
-    "Software engineer focused on building scalable systems and AI-powered products. Software Engineer and Product Owner at [Eclipta](https://eclipta.com.ar), building SaaS products, management systems and AI automation for businesses. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) developing Angular/.NET systems for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
+    "Software engineer focused on building scalable systems and AI-powered products. Software Engineer and Product Owner at [Eclipta](https://eclipta.com.ar), building SaaS products, management systems and AI automation for businesses. Previously a Software Engineer at [Mercado Libre](/#work) in the checkout team using Java/Spring Boot and hexagonal architecture. Spent 2+ years at [Bitsion](/#work) building web and mobile apps with Angular, React, .NET and Ionic for universities and telcos, and also [taught Angular](/#work) at Universidad Blas Pascal.",
   avatarUrl: "/me.png",
   languages: [
     { name: "Spanish", level: "Native" },
@@ -81,6 +81,8 @@ export const DATA = {
       items: [
         "React Native with Expo (Expo Router, EAS, push notifications)",
         "FlutterFlow (iOS and Android wallet app)",
+        "Ionic (mobile app for Claro Argentina)",
+        "Testing on iOS and Android emulators",
       ],
     },
     {
@@ -198,7 +200,7 @@ export const DATA = {
       start: "Mar 2025",
       end: "Jun 2026",
       description:
-        "Software Engineer in the **checkout team**. Built and maintained services using **Java** with **Spring Boot** in **hexagonal architecture**, following clean code practices and code review workflows. Used **Datadog**, **Grafana**, **Kibana**, and **New Relic** for observability. Leveraged AI-assisted development with **Cursor**, **Windsurf**, **GitHub Copilot**, and **Claude**.",
+        "Software Engineer in the **checkout team**. Built and maintained services using **Java** with **Spring Boot** in **hexagonal architecture**, following clean code practices and code review workflows. Developed frontend features with **React** and tested mobile flows on **iOS** and **Android** emulators. Used **Datadog**, **Grafana**, **Kibana**, and **New Relic** for observability. Leveraged AI-assisted development with **Cursor**, **Windsurf**, **GitHub Copilot**, and **Claude**.",
     },
     {
       company: "Eclipta",
@@ -210,7 +212,7 @@ export const DATA = {
       start: "Jan 2025",
       end: "Present",
       description:
-        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
+        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites with technical **SEO** for clients. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
     },
     {
       company: "Universidad Blas Pascal",
@@ -234,7 +236,7 @@ export const DATA = {
       start: "Aug 2022",
       end: "Mar 2025",
       description:
-        "Full stack development across multiple roles and projects. Built **tucarpeta+®** using **Atomic Design** for Universidad Siglo 21, Universidad Kennedy, and other clients using **Angular 15–18**, **.NET Framework**, **MongoDB**, and **Jenkins**/**Azure DevOps**. Developed **Paycloud**, a mobile wallet app published on **iOS** and **Android** using **FlutterFlow**. Earlier project: **tucarpeta©** for **Claro Argentina** with **AngularJS**, **.NET**, **Razor**, and **MongoDB**.",
+        "Full stack development across multiple roles and projects, with **Angular** and **React** on the frontend. Built **tucarpeta+®** using **Atomic Design** for Universidad Siglo 21, Universidad Kennedy, and other clients using **Angular 15–18**, **.NET Framework**, **MongoDB**, and **Jenkins**/**Azure DevOps**. Developed **Paycloud**, a mobile wallet app published on **iOS** and **Android** using **FlutterFlow**, and **AVA**, a mobile app for **Claro Argentina** built with **Ionic**. Also worked on **SEO** for web projects. Earlier project: **tucarpeta©** for **Claro Argentina** with **AngularJS**, **.NET**, **Razor**, and **MongoDB**.",
     },
     {
       company: "CEDI Tech Consulting",
@@ -258,7 +260,7 @@ export const DATA = {
       start: "2021",
       end: "2022",
       description:
-        "Developed software for two major projects: **CIDREL** for the Government of Santa Fe Province and **SAE** for Encode SA. Tech stack: **ASP.NET** (.NET Framework 4.7.2), **VB.NET**, **SOAP Web Services**, **MS SQL Server** (stored procedures), **Agile/Scrum**, **GitLab**.",
+        "Developed software for two major projects: **CIDREL** for the Government of Santa Fe Province and **SAE** for Encode SA. Tech stack: **ASP.NET** (.NET Framework 4.7.2), **VB.NET**, **SOAP Web Services**, **MS SQL Server** (stored procedures), **Agile/Scrum**, **GitLab**. Also worked on **SEO** for web projects.",
     },
     {
       company: "datSolutions",
