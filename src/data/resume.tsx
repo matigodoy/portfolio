@@ -72,6 +72,8 @@ export const DATA = {
         "HeroUI",
         "TanStack Query and Zustand",
         "Angular 15–18 and AngularJS",
+        "Vue.js",
+        "Webpack",
         "Atomic Design",
         "Progressive Web Apps",
         "Web performance optimization (Lighthouse, lazy loading, image and bundle size optimization)",
@@ -213,7 +215,7 @@ export const DATA = {
       start: "Jan 2025",
       end: "Present",
       description:
-        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites with technical **SEO** for clients, and optimize **web performance** across Chadbot, Jugador and client sites such as Docta Steel and MD Equipamientos. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
+        "**Eclipta** is a software lab that builds its own SaaS products and custom systems for businesses; I lead the development team and own the product roadmap. Lead development of **Chadbot**, an **AI** messaging platform for WhatsApp, Instagram and Telegram, and **Jugador**, a booking and payments platform for sports venues with web and **iOS/Android** apps. Also build **ERPs** and websites with technical **SEO** for clients, and optimize **web performance** across Chadbot, Jugador and client sites such as Docta Steel and MD Equipamientos. Built **VRM**, Chadbot's predecessor, with the Meta and OpenAI APIs, a **.NET** backend and **SQL Server**; client landing pages with **Vue.js** and **Webpack**; and a wedding guest-management system with a **Vue.js** front end and a **Node.js** REST API on **PostgreSQL**. Stack: **Java/Spring Boot** (WebFlux, hexagonal architecture), **PostgreSQL**, **React/Next.js**, **React Native**, **OpenAI**, **Mercado Pago**, **Google Cloud Run** and **Firebase**, with **OpenTelemetry** observability and **GitHub Actions** deployments.",
     },
     {
       company: "Universidad Blas Pascal",
